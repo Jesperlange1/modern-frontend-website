@@ -1,0 +1,36 @@
+.brand-section {
+    margin-top: 50px;
+    .img-box {
+        padding: 30px 20px;
+        text-align: center;
+        position: relative;
+    }
+    .awards {
+        display: flex;
+        justify-content: space-between;
+    }
+    .text-box {
+        padding: 0 20px;
+        .header {
+            font-size: 18px;
+            font-weight: 400;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .sub-header {
+            font-size: 13px;
+            font-weight: 400;
+            text-transform: uppercase;
+        }
+        .text {
+            font-weight: 400;
+            &>a {
+                color: $highlightTextColor;
+            }
+        }
+        &.extra-margin {
+            padding-top: 90px;
+            padding-bottom: 15px;
+        }
+    }
+}

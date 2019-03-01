@@ -1,0 +1,193 @@
+//Top part of product page
+.section-top-product {
+    margin-top: 50px;
+    display: flex;
+    .slider {
+        width: 45%;
+    }
+    .product-info {
+        width: 55%;
+        padding-left: 30px;
+    }
+    .product-title {
+        display: block;
+        font-size: 18px;
+        font-weight: 400;
+        margin: 0 0 15px;
+    }
+    .product-text {
+        margin: 20px 0;
+        ul {
+            list-style-type: disc;
+            margin: 15px;
+        }
+        li {
+            float: none;
+            margin: 15px;
+        }
+    }
+}
+
+.slider {
+    position: relative;
+    .arrow {
+        position: absolute;
+        top:50%;        
+        padding:5px 15px;
+        font-size:48px;
+        color:$headerColor;
+
+        &:hover, &:active, &:focus{
+            background-color: $highlightTextColor;
+            color:$whiteColor;
+        }
+    }
+    .arrow-left {
+       left:0;
+    }
+    .arrow-right {
+        right:0;
+    }
+}
+
+.review-line {
+    display: flex;
+    color: $textColor;
+    &>div {
+        margin-right: 10px;
+    }
+    .review-text {
+        margin-left: 10px;
+    }
+    .star {
+        color: $textColor;
+        margin-right: 0;
+    }
+    .star.filled {
+        color: $starGold;
+    }
+    a {
+        color: $textColor;
+    }
+    a:hover {
+        color: $highlightTextColor;
+    }
+    .share-part {
+        a {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+    }
+}
+
+.price-line {
+    font-weight: 300;
+    font-size: 30px;
+    margin: 20px 0;
+    .bill-type {
+        font-size: 16px;
+        margin-left: -3px;
+    }
+}
+
+.info-line {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    .subject {
+        display: inline-block;
+        margin: 0px;
+        text-transform: uppercase;
+    }
+    .text {
+        display: inline-block;
+        margin: 0px;
+    }
+}
+
+.product-selection-properties {
+    .properties {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    .property {
+        width: 33.33%;
+        select,
+        input {
+            padding: 5px;
+            height: 30px;
+            border: 1px solid $inputBorderColor;
+            width: 150px;
+            color: $topBarTextColor;
+        }
+        input {
+            width: 50px;
+        }
+    }
+    .button-row {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+    .stylish-button:hover {
+        background-color: $topBarColor;
+        border-color: $topBarColor;
+        color: $whiteColor;
+    }
+    .compare {
+        color: $headerColor2;
+        font-size: 14px;
+        text-transform: uppercase;
+        .icon {
+            padding: 6px;
+            height: 30px;
+            width: 30px;
+            background-color: $headerColor2;
+            border-radius: 50px;
+            color: $whiteColor;
+            display: inline-block;
+            text-align: center;
+        }
+        &:hover {
+            color: $highlightTextColor;
+            .icon {
+                background-color: $highlightTextColor;
+            }
+        }
+    }
+}
+
+//Lower part of product page
+.section-bottom-product {
+    margin-top: 30px;
+    margin-bottom: 50px;
+    .button-line {
+        background-color: $bottomBarNavBackgroundColor;
+        display: flex;
+    }
+    .product-description-header {
+        text-transform: uppercase;
+        font-weight: 400;
+        color: $headerColor2;
+    }
+    .product-description-text {
+        font-family: $textFont;
+        color: $textColor;
+        font-weight: 400;
+    }
+}
+
+.borderless-button {
+    background-color: transparent;
+    border: 0;
+    color: $headerColor;
+    font-size: 16px;
+    font-family: $headerFont;
+    text-transform: uppercase;
+    min-width: 150px;
+    cursor: pointer;
+    &:hover,
+    &.active {
+        background-color: $topBarColor;
+        color: white;
+    }
+}

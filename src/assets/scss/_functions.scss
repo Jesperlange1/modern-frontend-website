@@ -1,0 +1,10 @@
+$browser-context: 13; // Default
+$darken-amount: 10%;
+//Calcualtes px to ems
+@function em($pixels, $context: $browser-context) {
+    @return #{$pixels/$context}em
+}
+
+@function darkenC($base-color, $amount: $darken-amount) {
+    @return #{darken($base-color, $amount)}
+}

@@ -1,0 +1,174 @@
+//slider section
+.slider {
+    background-color: $bottomBarNavBackgroundColor;
+    .slider-image {
+        height: 80vh;
+        background-size: auto 100%;
+    }
+    .stylish-button {
+        position: absolute;
+        right: 15%;
+        bottom: 15%;
+    }
+}
+
+//article section
+.article-nav {
+    margin-bottom: 20px;
+    .item {
+        padding: 15px 15px;
+        margin-right: 10px;
+    }
+}
+
+.articles2 {
+    display: flex;
+    flex-wrap: nowrap;
+    width: auto;
+    position: relative;
+    
+}
+
+
+.article {
+    margin:10px;
+    padding-bottom: 10px;
+    position: relative;
+    background-color: $whiteColor;
+    &:hover,
+    &:focus,
+    &:active {
+        box-shadow: 0px 0px 10px #8888;
+        z-index: 10;
+        margin-bottom: -100px;
+        .img-boxes{
+            display: block;
+        }
+        .article-description{
+            display: block;
+        }
+    }
+}
+
+.img-boxes {
+    max-width: 20%;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    text-align: center;
+    padding-top:5px;
+    display: none;
+    height: 75%;
+    overflow-y: hidden;
+    .img-box {
+        margin: auto;
+        width:calc(100% - 10px);
+        margin-bottom: 5px;
+        box-shadow: 0px 0px 5px 0 $priceColor;
+        &:hover {
+            box-shadow: 0px 0px 8px 0 $highlightTextColor;
+        }
+    }
+}
+
+.prices {
+    position: absolute;
+    display: flex;
+    margin: 5px;   
+}
+.price {
+    color: $priceColor;
+    position: relative;
+    display: inline-block;
+    margin-left: 10px;
+    .bill-type {
+        position: absolute;
+        font-size: 8px;
+        top: 2px;
+        left: -8px;
+    }
+    &.offer {
+        text-decoration: line-through;
+    }
+}
+.offer-price {
+    margin-left: 15px;
+}
+.article-description {
+    text-align: center;
+    display: none;
+    height: 110px;
+    overflow: hidden;
+    background-color: $whiteColor;
+    
+    .buttons {
+        display: flex;
+        justify-content: center;
+        a {
+            color: white;
+            border-radius: 50px;
+            background-color: $headerColor2;
+            padding: 4px;
+            height: 24px;
+            width: 24px;
+            margin: 0 5px;
+            font-size: 12px;
+        }
+        a:hover {
+            background-color: $highlightTextColor;
+        }
+    }
+}
+//lookbook section
+.lookbook-section{
+    display: flex;
+    margin-bottom: 50px;
+}
+.lookbook{
+    width:calc(33.33%);
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    border: 10px $whiteColor solid;
+    padding: 10px;
+  background-color: $bottomBarNavBackgroundColor;
+  &:first-child{
+      border-left-width:0; 
+  }
+  &:last-child{
+    border-right-width:0; 
+}
+}
+.lookbook-image{
+    width:100%;
+    max-width: 40%;
+    height: auto;
+   
+}
+.lookbook-details{
+    width:60%;
+    text-align: right;
+    padding-top: 40px;
+    display: inline-block;
+    .header{
+        font-weight: bold;
+        font-size:48px;
+        margin:0px;
+        text-transform: uppercase;
+        text-overflow:ellipsis;
+        direction: rtl;
+        
+    }
+    .sub-header{
+        font-weight: 300;
+        font-size: 48px;
+        margin:0px;
+        text-transform: uppercase;
+        text-overflow:ellipsis;
+        direction: rtl;
+    }
+    .description{
+        font-size: 15px;
+        padding-left:15px;
+    }
+}

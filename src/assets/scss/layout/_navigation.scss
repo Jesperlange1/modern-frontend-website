@@ -1,0 +1,180 @@
+//Top navigation bar
+header {
+    position: relative;
+}
+
+.topnav {
+    background-color: $topBarColor;
+    color: $topBarTextColor;
+    ul {
+        display: block;
+        height: 36px;
+    }
+    .currency {
+        .select {
+            color: $topBarTextColor;
+            height: 36px;
+            font-size: 12px;
+            cursor: pointer;
+        }
+        .select:hover,
+        .select:active,
+        select:focus {
+            background-color: $highlightTextColor;
+            color: $whiteColor;
+        }
+    }
+    a {
+        color: $topBarTextColor;
+    }
+    a:hover {
+        color: $highlightTextColor;
+    }
+    .shopping-cart-link {
+        background-color: $highlightTextColor;
+        color: $whiteColor;
+        margin-left: 50px;
+        a {
+            color: $whiteColor;
+            .fa {
+                margin: 0 4px;
+                margin-bottom: -4px;
+            }
+            .fa-shopping-cart {
+                margin-right: 15px;
+            }
+        }
+    }
+    .shopping-cart-link:hover {
+        background-color: darkenC($highlightTextColor);
+    }
+}
+
+//Top navigation boxes
+.menu-point-hover-box {
+    position: absolute;
+    background-color: $whiteColor;
+    margin-top: 00px;
+    margin-left: 15px;
+    box-shadow: 0 0 5px $topBarTextColor;
+    padding: 20px;
+    display:none;
+    cursor: default;
+    .top-hover-box {
+        display: flex;
+        margin-bottom: 30px;
+    }
+    .menu-point-category {
+        width: 50%;
+        min-width:100px;
+        text-align: left;
+        li {
+            margin: 10px 0;
+            float: none;
+            width: auto;
+        }
+    }
+    .menu-point-category-header>h4 {
+        font-weight: 400;
+        font-size: 13px;
+        color: $headerColor;
+    }
+    .menu-point-category-item>a {
+        font-weight: 300;
+        font-size: 13px;
+        color: $headerColor;
+        text-transform: initial;
+        &:hover {
+            color: $highlightTextColor;
+        }
+    }
+    .offer {
+        width: 350px;
+        height: 160px;
+        background-color: $topBarColor;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        a {
+            color: $whiteColor;
+            &:hover {
+                color: $highlightTextColor;
+            }
+        }
+    }
+    .offer-header {
+        font-weight: bold;
+        font-size: 36px;
+    }
+    .offer-text {
+        font-weight: 400;
+        font-size: 36px;
+    }
+}
+
+//Bottom navigation bar
+.bottomnav {
+    padding: 20px;
+    position: absolute;
+    z-index: 999;
+    left: 0;
+    right: 0;
+    .item.search-bar {
+        padding-top: 2px;
+    }
+}
+
+.menu-point {
+    text-align: center;
+    position: relative;
+    text-transform: uppercase;
+    padding: 0px;
+    cursor: pointer;
+    color: $topBarColor;
+    margin-right: 10px;
+    letter-spacing: 0px;
+    .fa-angle-down {
+        margin-left: 0px;
+        position: absolute;
+        left: 15px;
+    }
+}
+.menu-point-header a{
+    padding-bottom: 30px;
+}
+.menu-point-header:hover .menu-point-hover-box{
+    display: block;
+}
+.item.search-bar {
+    padding: 5px 15px 10px;
+    margin-left: 20px;
+    .search-field {
+        padding: 5px;
+        height: 30px;
+        margin-right: 0;
+        border: 1px solid $inputBorderColor;
+        border-right-width: 0px;
+        width: 150px;
+    }
+    .search-button {
+        margin: 0;
+        background-color: $whiteColor;
+        border: solid $inputBorderColor;
+        border-width: 1px 1px 1px 0px;
+        height: 30px;
+        margin-left: -4px;
+        cursor: pointer;
+        color: $topBarTextColor;
+    }
+    .search-button:hover {
+        color: $highlightTextColor;
+    }
+}
+
+//General navigation styling
+.nav {
+    .item {
+        display: inline-block;
+    }
+}
