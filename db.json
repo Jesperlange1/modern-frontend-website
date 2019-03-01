@@ -1,0 +1,245 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "name",
+      "date": "2019-05-03",
+      "collection": "Men",
+      "price": "70.99",
+      "offerPrice": "65.00",
+      "shortDescription": "prod 1 short description",
+      "longDescription": "prod 1 long description",
+      "category": "shirt",
+      "tags": ["casual", "t-shirt", "other tag"],
+      "sizes": ["XL", "L", "M", "S"],
+      "colurs": ["Red", "Black", "Blue"],
+      "reviews": [
+        {
+          "id": 1,
+          "score": 3
+        },
+        {
+          "id": 2,
+          "score": 4
+        },
+        {
+          "id": 3,
+          "score": 1
+        }
+      ],
+      "images": [
+        {
+          "imageId": "1",
+          "url": "src/assets/products/Men/prod1-img1.jpg",
+          "alt": "Product 1 img 1"
+        },
+        {
+          "image-id": "2",
+          "url": "src/assets/products/Men/prod1-img2.jpg",
+          "alt": "Product 1 img 2"
+        }
+      ]
+    },
+    {
+        "id": 2,
+        "name": "name",
+        "date": "2019-02-03",
+        "collection": "Men",
+        "price": "89.99",
+        "offerPrice": "",
+        "shortDescription": "prod 2 short description",
+        "longDescription": "prod 2 long description",
+        "category": "shirt",
+        "tags": ["casual", "t-shirt", "sweet", "other new tag"],
+        "sizes": ["XL", "L", "M"],
+        "colurs": ["Red", "Black", "Blue"],
+        "reviews": [
+          {
+            "id": 1,
+            "score": 3
+          },
+          {
+            "id": 2,
+            "score": 4
+          },
+          {
+            "id": 3,
+            "score": 1
+          }
+        ],
+        "images": [
+          {
+            "imageId": "1",
+            "url": "src/assets/products/Men/2-img1.jpg",
+            "alt": "Product 2 img 1"
+          },
+          {
+            "image-id": "2",
+            "url": "src/assets/products/Men/prod2-img2.jpg",
+            "alt": "Product 2 img 2"
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "name": "name",
+        "date": "2019-06-03",
+        "collection": "Men",
+        "price": "29.99",
+        "offerPrice": "15.00",
+        "shortDescription": "prod 3 short description",
+        "longDescription": "prod 3 long description",
+        "category": "shirt",
+        "tags": ["casual", "t-shirt", "other tag"],
+        "sizes": ["XL", "L", "M", "S"],
+        "colurs": ["Red", "Black", "Blue"],
+        "reviews": [
+          {
+            "id": 1,
+            "score": 3
+          },
+          {
+            "id": 2,
+            "score": 4
+          },
+          {
+            "id": 3,
+            "score": 1
+          }
+        ],
+        "images": [
+          {
+            "imageId": "1",
+            "url": "src/assets/products/Men/prod3-img1.jpg",
+            "alt": "Product 3 img 1"
+          },
+          {
+            "image-id": "2",
+            "url": "src/assets/products/Men/prod3-img2.jpg",
+            "alt": "Product 3 img 2"
+          }
+        ]
+      },
+      {
+        "id": 4,
+        "name": "name",
+        "date": "2019-01-03",
+        "collection": "Women",
+        "price": "59.99",
+        "offerPrice": "20.00",
+        "shortDescription": "prod 4 short description",
+        "longDescription": "prod 4 long description",
+        "category": "shirt",
+        "tags": ["casual", "t-shirt", "other tag"],
+        "sizes": ["L", "M", "S"],
+        "colurs": ["Red", "Black", "Blue", "Gray"],
+        "reviews": [
+          {
+            "id": 1,
+            "score": 3
+          },
+          {
+            "id": 2,
+            "score": 4
+          },
+          {
+            "id": 3,
+            "score": 1
+          }
+        ],
+        "images": [
+          {
+            "imageId": "1",
+            "url": "src/assets/products/Men/prod4-img1.jpg",
+            "alt": "Product 4 img 1"
+          },
+          {
+            "image-id": "2",
+            "url": "src/assets/products/Men/prod4-img2.jpg",
+            "alt": "Product 4 img 2"
+          }
+        ]
+      },
+      {
+        "id": 5,
+        "name": "name",
+        "date": "2019-04-03",
+        "collection": "Women",
+        "price": "49.99",
+        "offerPrice": "49.00",
+        "shortDescription": "prod 5 short description",
+        "longDescription": "prod 5 long description",
+        "category": "shirt",
+        "tags": ["casual", "t-shirt", "other tag"],
+        "sizes": ["L", "M", "S"],
+        "colurs": ["Red", "Black", "Blue", "Gray"],
+        "reviews": [
+          {
+            "id": 1,
+            "score": 3
+          },
+          {
+            "id": 2,
+            "score": 4
+          },
+          {
+            "id": 3,
+            "score": 1
+          }
+        ],
+        "images": [
+          {
+            "imageId": "1",
+            "url": "src/assets/products/Men/prod5-img1.jpg",
+            "alt": "Product 5 img 1"
+          },
+          {
+            "image-id": "2",
+            "url": "src/assets/products/Men/prod5-img2.jpg",
+            "alt": "Product 5 img 2"
+          }
+        ]
+      }
+      ,
+      {
+        "id": 6,
+        "name": "name",
+        "date": "2018-07-03",
+        "collection": "Women",
+        "price": "39.99",
+        "offerPrice": "28.00",
+        "shortDescription": "prod 6 short description",
+        "longDescription": "prod 6 long description",
+        "category": "shirt",
+        "tags": ["casual", "t-shirt", "other tag"],
+        "sizes": ["L", "M", "S"],
+        "colurs": ["Red", "Black", "Blue", "Gray", "Yellow"],
+        "reviews": [
+          {
+            "id": 1,
+            "score": 3
+          },
+          {
+            "id": 2,
+            "score": 4
+          },
+          {
+            "id": 3,
+            "score": 1
+          }
+        ],
+        "images": [
+          {
+            "imageId": "1",
+            "url": "src/assets/products/Men/prod6-img1.jpg",
+            "alt": "Product 6 img 1"
+          },
+          {
+            "image-id": "2",
+            "url": "src/assets/products/Men/prod6-img2.jpg",
+            "alt": "Product 6 img 2"
+          }
+        ]
+      }
+  ]
+}

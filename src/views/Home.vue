@@ -30,8 +30,8 @@
                 </div>
               </div>
               <div class="img-boxes">
-                <img class="img-box" src="@/assets/products/Men/prod1-img1.jpg">
-                <img class="img-box" src="src/assets/products/Men/prod1-img2.jpg">
+                <img class="img-box" src="../assets/products/Men/prod1-img1.jpg">
+                <img class="img-box" src="../assets/products/Men/prod1-img2.jpg">
               </div>
               <img
                 class="item-focused-image"
