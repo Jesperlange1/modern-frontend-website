@@ -17,6 +17,9 @@
     }
     .product-text {
         margin: 20px 0;
+        min-height: 170px;
+        max-height: 200px;
+        overflow-y:auto;
         ul {
             list-style-type: disc;
             margin: 15px;

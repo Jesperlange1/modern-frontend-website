@@ -1,13 +1,17 @@
 .signup-section {
-    margin-top:30px;
+    margin-top: 30px;
     margin-bottom: 50px;
     input {
         padding: 5px;
         height: 30px;
         border: 1px solid $inputBorderColor;
         width: 100%;
-        color: $topBarTextColor;
-        margin-top:30px;
+        color: $topBarColor;
+        margin-top: 30px;
+        &.error {
+            background-color: #fcf6f7;
+            border-color: #bb5465;
+        }
     }
     .header-text {
         font-size: 18px;
@@ -21,30 +25,29 @@
         padding-left: 30px;
         border-left: solid 1px $inputBorderColor;
     }
-    .newsletter-line{
+    .newsletter-line {
         position: relative;
         display: block;
-       margin-top:30px;
-
+        margin-top: 30px;
     }
-    .newsletter-checkbox{
+    .newsletter-checkbox {
         background-color: white;
-        width:22px;
+        width: 22px;
         margin-right: 10px;
-        float:left;
-        input{
-            margin-top:0px;
+        float: left;
+        input {
+            margin-top: 0px;
         }
     }
-    .newsletter-text{       
+    .newsletter-text {
         display: inline-block;
         line-height: 30px;
         font-size: 13px;
         color: $textColor;
         font-family: $textFont;
     }
-    .button-line{
-        margin-top:30px;
+    .button-line {
+        margin-top: 30px;
         text-align: center;
         .left-column {
             padding-right: 10px;
@@ -56,15 +59,14 @@
             position: relative;
             display: block;
         }
-        .forgotten-password{
-            padding:14px;
+        .forgotten-password {
+            padding: 14px;
             cursor: pointer;
         }
-        .forgotten-password.privacy{
-            padding:7px;
-            
+        .forgotten-password.privacy {
+            padding: 7px;
         }
-        .stylish-button{
+        .stylish-button {
             font-size: 15px;
             text-align: left;
         }

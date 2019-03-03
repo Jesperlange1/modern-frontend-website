@@ -31,7 +31,7 @@
     </nav>
     <nav class="nav bottomnav medium-width">
       <router-link to="/" class="brand item btn">
-        <img src="src/assets/logo.png" alt="Avenue Fashion logo">
+        <img src="../assets/logo.png" alt="Avenue Fashion logo">
       </router-link>
       <div class="float-right flex">
         <ul class="menu-point item">
@@ -207,33 +207,5 @@
 </template>
 <script>
 export default {};
-var clickEle = document.getElementsByClassName("menu-point-header");
-console.log(clickEle);
-for (var i = 0; i < clickEle.length; i++) {
-  clickEle[i].onclick = function() {
-    var ele = this;
-    var box = ele.nextElementSibling;
-    console.log(box.className);
-  };
-}
 
-/* $(document).ready(function() {
-        $(".menu-point-header").click(function() {
-          var ele = this;
-          var box = $(ele).siblings(".menu-point-hover-box");
-
-          console.log(box);
-          if ($(box).hasClass("hidden")) {
-            $(".menu-point-hover-box").addClass("hidden");
-            $(box).removeClass("hidden");
-          } else {
-            
-            $(box).addClass("hidden");
-          }
-        });
-        $(".menu-point-hover-box").mouseleave(function(){
-          var box = this;
-          $(box).addClass("hidden");
-        })
-      });*/
 </script>

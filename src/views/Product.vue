@@ -1,50 +1,35 @@
 <template>
-  <main>
+  <main v-if="product != typeof 'undefined' && typeof product == 'object'">
     <section class="full-width">
       <div
         class="page-title-header background-image"
-        style="background-image:url(src/assets/Images/header-image2.png)"
+        v-bind:style="{'background-image':'url(' + 
+        require('../assets/Images/header-image2.png') +')'}"
       >
         <h3 class="title">
           <span class="big-text">Product</span> View
         </h3>
         <h4 class="sub-header">
-          mens - casuals - hoodies & sweatshirts -
-          <span
-            class="highlight-text"
-          >ave classic sweatshirt</span>
+          mens - casuals - {{product.category}} -
+          <span class="highlight-text">{{product.name}}</span>
         </h4>
       </div>
     </section>
     <section class="small-width section-top-product">
-      <div class="slider">
-        <div class="arrow arrow-left">
-          <i class="fas fa-angle-left"></i>
-        </div>
-        <img src="src/assets/products/Men/prod1-img1.jpg" alt="black shirt">
-        <div class="arrow arrow-right">
-          <i class="fas fa-angle-right"></i>
-        </div>
-      </div>
+      <slider :images="product.images"></slider>
       <div class="product-info">
-        <h2 class="product-title">Ave classic sweatshirt</h2>
-        <div class="review-line block">
-          <div class="star filled">
+        <h2 class="product-title">{{product.name}}</h2>
+        <div
+          v-if="product.reviews != typeof 'undefined' && typeof product.reviews == 'object'"
+          class="review-line block"
+        >
+          <div v-for="n in avgReviewScore" :key="n + 'filledStar'" class="star filled">
             <i class="fa fa-star"></i>
           </div>
-          <div class="star filled">
+          <div v-for="i in 5-avgReviewScore" :key="i + 'notFilledStar'" class="star">
             <i class="fa fa-star"></i>
           </div>
-          <div class="star filled">
-            <i class="fa fa-star"></i>
-          </div>
-          <div class="star">
-            <i class="fa fa-star"></i>
-          </div>
-          <div class="star">
-            <i class="fa fa-star"></i>
-          </div>
-          <div class="review-text">3 Review(s)</div>
+          <div class="review-text">{{product.reviews.length}} Review(s)</div>
           <div class="seperator-sign">|</div>
           <div class="add-review">
             <a href="#">Add a Review</a>
@@ -70,11 +55,13 @@
           </div>
         </div>
         <div class="price-line block">
-          <div class="price offer">
-            <span class="bill-type">£</span>107
+          <div v-bind:class="{ offer: (product.offerPrice != '')}" class="price">
+            <span class="bill-type">£</span>
+            {{product.price}}
           </div>
           <div class="price offer-price">
-            <span class="bill-type">£</span>89.99
+            <span class="bill-type">£</span>
+            {{product.offerPrice}}
           </div>
         </div>
         <div class="info-line">
@@ -83,16 +70,17 @@
         </div>
         <div class="info-line">
           <h5 class="subject">Product code:</h5>
-          <p class="text">#499577</p>
+          <p class="text">#{{product.id}}</p>
         </div>
         <div class="info-line">
           <h5 class="subject">Tags:</h5>
-          <p class="text highlight-text">Classic, Casual, V-neck, Loose</p>
+          <p
+            v-if=" typeof product.tags == 'object'"
+            class="text highlight-text"
+          >{{product.tags.toString().replace(",", ", ")}}</p>
         </div>
         <div class="product-text">
-          Donec sem lorem laoreet tempor un risus vitae, rutrum sodales nibh
-          suspendisse est congue metus nunc, id viverra elit loreti rhoncus quis
-          consecteur es. Donec pulvinar tempor lorem a pretium justo interdum.
+          {{product.shortDescription}}
           <ul>
             <li>Elasticated cuffs;</li>
             <li>Casual fit</li>
@@ -107,18 +95,14 @@
               <h4>Colour</h4>
               <select name="product-colour" id="product-colour">
                 <option class="hidden" value>Select Colour</option>
-                <option value="Black">Black</option>
-                <option value="Blue">Blue</option>
-                <option value="Red">Red</option>
+                <option v-for="colour in product.colours" :key="colour" :value="colour">{{colour}}</option>
               </select>
             </div>
             <div class="property">
               <h4>Size</h4>
               <select name="product-size" id="product-size">
                 <option class="hidden" value>Select size</option>
-                <option value="XL">XL</option>
-                <option value="L">L</option>
-                <option value="M">M</option>
+                <option v-for="size in product.sizes" :key="size" :value="size">{{size}}</option>
               </select>
             </div>
             <div class="property">
@@ -152,9 +136,7 @@
       </div>
       <div class="button-result">
         <div class="product-description">
-          <h5
-            class="product-description-header"
-          >Nunc egestas posuere enim, eu maximus erat posuere eget</h5>
+          <h5 class="product-description-header">{{product.longDescription}}</h5>
           <div class="product-description-text">
             Sed ut mi mollis, consequat nulla lacinia, hendrerit turpis. Nulla
             sapien magna, interdum quis pretium nec, pharetra at felis.
@@ -184,9 +166,70 @@
       </div>
     </section>
   </main>
+  <main v-else>
+    <section class="full-width">
+      <div
+        class="page-title-header background-image"
+        v-bind:style="{'background-image':'url(' + 
+        require('../assets/Images/header-image2.png') +')'}"
+      >
+        <h3 class="title">
+          <span class="big-text">No</span> product
+        </h3>
+        <h4 class="sub-header">
+          with this
+          <span class="highlight-text">id</span>
+        </h4>
+      </div>
+    </section>
+  </main>
 </template>
 <script>
+import axios from "axios";
+import slider from "@/components/smallComponents/slider.vue";
 export default {
-  props: ['id']
-}
+  components: {
+    slider
+  },
+  data() {
+    return {
+      product: {}
+    };
+  },
+  computed: {
+    avgReviewScore: function() {
+      var avgScore = 0;
+      var reviews = this.product.reviews;
+      console.log(reviews);
+      for (var i = 0; i < reviews.length; i++) {
+        avgScore += reviews[i]["score"];
+        console.log(avgScore);
+      }
+      avgScore = avgScore / reviews.length;
+      console.log(avgScore);
+
+      return parseInt(avgScore);
+    },
+    formattedTags: function() {
+      var tags = this.product.tags.toString().replace(",", ", ");
+
+      return tags;
+    }
+  },
+
+  created() {
+    var path = window.location.origin.replace("#", "");
+    var productId = this.$route.params.product_id;
+    axios
+      .get(path + "/db.json")
+      .then(response => {
+        console.log(productId);
+        var data = response.data;
+        this.product = data.find(x => x.id == productId);
+      })
+      .catch(error => {
+        console.log(error.response);
+      });
+  }
+};
 </script>

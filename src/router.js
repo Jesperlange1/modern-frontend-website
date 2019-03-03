@@ -20,7 +20,7 @@ export default new Router({
       component: Brand
     },
     {
-      path: "/Product/:id",
+      path: "/Product/:product_id",
       name: "product",
       component: Product
     },
@@ -34,5 +34,8 @@ export default new Router({
       name: "signin",
       component: SignUp
     }
-  ]
+  ],
+  scrollBehavior() {
+    return { x: 0, y: 0 }
+  }
 });

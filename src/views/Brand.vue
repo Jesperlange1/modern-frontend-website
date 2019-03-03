@@ -3,7 +3,8 @@
     <section class="full-width">
       <div
         class="page-title-header background-image"
-        style="background-image:url(src/assets/Images/header-image2.png)"
+        v-bind:style="{'background-image':'url(' + 
+        require('../assets/Images/header-image2.png') +')'}"        
       >
         <h3 class="title">
           <span class="big-text">The</span> Brand
@@ -15,10 +16,10 @@
       <div class="columns">
         <div class="left-column">
           <div class="img-box">
-            <img src="src/assets/Images/Guy-glasses.png" alt="Guy with glasses">
+            <img src="../assets/Images/Guy-glasses.png" alt="Guy with glasses">
           </div>
           <div class="img-box">
-            <img src="src/assets/Images/female-clothes-designer.png" alt="Female clothes designer">
+            <img src="../assets/Images/female-clothes-designer.png" alt="Female clothes designer">
           </div>
           <div class="text-box">
             <h3 class="header">our values, vision and strategy</h3>
@@ -55,7 +56,7 @@
             </p>
           </div>
           <div class="img-box">
-            <img src="src/assets/Images/Indian-girl.png" alt="Indian girl">
+            <img src="../assets/Images/Indian-girl.png" alt="Indian girl">
           </div>
           <div class="text-box">
             <h3 class="header">Ethical trading</h3>
