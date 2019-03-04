@@ -5,7 +5,7 @@
         <span class="bill-type">£</span>
         {{product.price}}
       </div>
-      <div class="price offer-price">
+      <div v-if="product.offerPrice != ''" class="price offer-price">
         <span class="bill-type">£</span>
         {{product.offerPrice}}
       </div>

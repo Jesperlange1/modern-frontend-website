@@ -33,7 +33,7 @@
 
 .slider {
     position: relative;
-    .arrow {
+    .slider__arrow {
         position: absolute;
         top:50%;        
         padding:5px 15px;
@@ -45,10 +45,10 @@
             color:$whiteColor;
         }
     }
-    .arrow-left {
+    .arrow--left {
        left:0;
     }
-    .arrow-right {
+    .arrow--right {
         right:0;
     }
 }

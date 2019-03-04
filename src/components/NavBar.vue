@@ -47,10 +47,10 @@
                     <h4>Casuals</h4>
                   </li>
                   <li class="menu-point-category-item">
-                    <router-link to="/product:1">Jackets</router-link>
+                    <router-link to="/product/0">Jackets</router-link>
                   </li>
                   <li class="menu-point-category-item">
-                    <router-link to="/">Hoodies & Sweatshirts</router-link>
+                    <router-link to="/product/0">Hoodies & Sweatshirts</router-link>
                   </li>
                   <li class="menu-point-category-item">
                     <a href>Polo Shirts</a>

@@ -172,3 +172,20 @@
         padding-left:15px;
     }
 }
+@media (max-width: 900px){
+    .articles2{
+        flex-wrap: wrap;
+    }
+    
+    .left-column{
+        width:100%;
+    }
+    .right-column{
+        width:100%;
+    }
+}
+@media(max-width:500px){
+    .columns{
+        flex-wrap: wrap;
+    }
+}

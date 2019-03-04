@@ -1,10 +1,10 @@
 <template>
   <div v-if="typeof images == 'object'" class="slider">
-    <div @click="changeSelectedImage(selectedImage -1)" class="arrow arrow-left">
+    <div @click="changeSelectedImage(selectedImage -1)" class="slider__arrow arrow--left">
       <i class="fas fa-angle-left"></i>
     </div>
     <img  :src="images[selectedImage].url" alt="Product image">
-    <div @click="changeSelectedImage(selectedImage +1)" class="arrow arrow-right">
+    <div @click="changeSelectedImage(selectedImage +1)" class="slider__arrow arrow--right">
       <i class="fas fa-angle-right"></i>
     </div>
   </div>

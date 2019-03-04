@@ -79,9 +79,9 @@
             </p>
           </div>
           <div class="img-box awards">
-            <img src="src/assets/Images/award1.png" alt="Guy with glasses">
-            <img src="src/assets/Images/award2.png" alt="Guy with glasses">
-            <img src="src/assets/Images/award3.png" alt="Guy with glasses">
+            <img src="../assets/Images/award1.png" alt="Award 1">
+            <img src="../assets/Images/award2.png" alt="Award 2">
+            <img src="../assets/Images/award3.png" alt="Award 3">
           </div>
         </div>
       </div>

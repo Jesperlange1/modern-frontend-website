@@ -50,7 +50,7 @@ header {
     }
 }
 
-//Top navigation boxes
+//Hover navigation boxes
 .menu-point-hover-box {
     position: absolute;
     background-color: $whiteColor;
@@ -145,7 +145,7 @@ header {
 }
 .menu-point-header:hover .menu-point-hover-box{
     display: block;
-}
+}       
 .item.search-bar {
     padding: 5px 15px 10px;
     margin-left: 20px;
