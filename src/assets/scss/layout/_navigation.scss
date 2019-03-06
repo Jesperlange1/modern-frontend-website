@@ -30,26 +30,26 @@ header {
     a:hover {
         color: $highlightTextColor;
     }
-    .shopping-cart-link {
-        background-color: $highlightTextColor;
+   
+}
+.shopping-cart-link {
+    background-color: $highlightTextColor;
+    color: $whiteColor;
+    margin-left: 50px;
+    a {
         color: $whiteColor;
-        margin-left: 50px;
-        a {
-            color: $whiteColor;
-            .fa {
-                margin: 0 4px;
-                margin-bottom: -4px;
-            }
-            .fa-shopping-cart {
-                margin-right: 15px;
-            }
+        .fa {
+            margin: 0 4px;
+            margin-bottom: -4px;
+        }
+        .fa-shopping-cart {
+            margin-right: 15px;
         }
     }
-    .shopping-cart-link:hover {
-        background-color: darkenC($highlightTextColor);
-    }
 }
-
+.shopping-cart-link:hover {
+    background-color: darkenC($highlightTextColor);
+}
 //Hover navigation boxes
 .menu-point-hover-box {
     position: absolute;
@@ -58,15 +58,16 @@ header {
     margin-left: 15px;
     box-shadow: 0 0 5px $topBarTextColor;
     padding: 20px;
-    display:none;
+    display: none;
     cursor: default;
+    z-index: 99;
     .top-hover-box {
         display: flex;
         margin-bottom: 30px;
     }
     .menu-point-category {
         width: 50%;
-        min-width:100px;
+        min-width: 100px;
         text-align: left;
         li {
             margin: 10px 0;
@@ -84,6 +85,9 @@ header {
         font-size: 13px;
         color: $headerColor;
         text-transform: initial;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
         &:hover {
             color: $highlightTextColor;
         }
@@ -140,12 +144,15 @@ header {
         left: 15px;
     }
 }
-.menu-point-header a{
+
+.menu-point-header a {
     padding-bottom: 30px;
 }
-.menu-point-header:hover .menu-point-hover-box{
+
+.menu-point-header:hover .menu-point-hover-box {
     display: block;
-}       
+}
+
 .item.search-bar {
     padding: 5px 15px 10px;
     margin-left: 20px;
@@ -171,10 +178,112 @@ header {
         color: $highlightTextColor;
     }
 }
+.mobile-menu-line{
+    background-color: $topBarColor;
+    color:white;
+    display: flex !important;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    border-top:3px solid $whiteColor;
+
+    .shopping-cart-link{
+        
+    }
+}
+.burger-menu{
+    font-size: 20px;
+    padding:10px;
+}
 
 //General navigation styling
 .nav {
     .item {
         display: inline-block;
     }
+}
+
+.visible-xs {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .nav>div {
+        flex-wrap: wrap;
+    }
+    .hidden-xs {
+        display: none !important;
+    }
+    .visible-xs {
+        display: block;
+    }
+    .bottomnav {
+        display: block;
+        background-color: $topBarColor;
+        min-height: 100vh;
+    }
+    .brand {
+        width: 100vw;
+        background-color: $whiteColor;
+        margin: -20px  -20px 0 -20px;
+        text-align: center;
+    }
+    .topnav {
+        width: 100vw;
+        position: relative;
+        padding: 0 10px;
+        ul {
+            height: auto;
+        }
+    }
+    .topnav .float-right {
+        float: none;
+        display: flex;
+        flex-wrap: no-wrap
+    }
+    .menu-point{
+        width:100%;
+        font-size: em(18);
+        text-align: center;
+        
+        > .menu-point-header{
+            float: none;
+           
+
+            br{
+                display: none;
+            }
+        }
+        a{
+            padding: 15px;
+            color:white;
+
+            &:hover{
+                color:$highlightTextColor;
+            }
+        }
+        .fa-angle-down{
+            position: relative;
+            float: right;
+        }
+
+    }
+    .item.search-bar{
+        width: 100%;
+        margin-top:20px;
+
+        .search-field{
+            width:calc(100% - 30px);
+        }
+    }
+    .menu-point-category-header{
+        padding-left: 15px;
+    }
+    .menu-point-hover-box{
+        position: relative;
+        width:auto;
+        margin:0;
+        padding: 0;    
+     
+    }
+    
 }

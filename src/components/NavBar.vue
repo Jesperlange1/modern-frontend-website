@@ -12,14 +12,14 @@
             </select>
           </li>
           <li class="float-right">
-            <div class="register-link item">
+            <div @click="activateNavbar" class="register-link item">
               <router-link to="/signup" class="btn">Register</router-link>
             </div>
 
-            <div class="sign-in-link item">
+            <div @click="activateNavbar" class="sign-in-link item">
               <router-link to="/signup" class="btn">Sign in</router-link>
             </div>
-            <div class="shopping-cart-link item btn">
+            <div class="shopping-cart-link item btn hidden-xs">
               <a href="#">
                 <i class="fa fa-shopping-cart"></i> empty
                 <i class="fa fa-angle-down"></i>
@@ -29,9 +29,21 @@
         </ul>
       </div>
     </nav>
-    <nav class="nav bottomnav medium-width">
+    <div class="mobile-menu-line visible-xs">
+      <div class="burger-menu" @click="activateNavbar">
+        <i class="fa fa-bars"></i>
+      </div>
+      <div class="shopping-cart-link item btn">
+        <a href="#">
+          <i class="fa fa-shopping-cart"></i> empty
+          <i class="fa fa-angle-down"></i>
+        </a>
+      </div>
+    </div>
+    <nav class="nav bottomnav medium-width" :class="{'hidden-xs': activeNavbar}">
+      
       <router-link to="/" class="brand item btn">
-        <img src="../assets/logo.png" alt="Avenue Fashion logo">
+        <img @click="activateNavbar" src="../assets/logo.png" alt="Avenue Fashion logo">
       </router-link>
       <div class="float-right flex">
         <ul class="menu-point item">
@@ -46,23 +58,23 @@
                   <li class="menu-point-category-header">
                     <h4>Casuals</h4>
                   </li>
-                  <li class="menu-point-category-item">
+                  <li @click="activateNavbar" class="menu-point-category-item">
                     <router-link to="/product/0">Jackets</router-link>
                   </li>
-                  <li class="menu-point-category-item">
+                  <li @click="activateNavbar" class="menu-point-category-item">
                     <router-link to="/product/0">Hoodies & Sweatshirts</router-link>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>Polo Shirts</a>
+                    <a @click="activateNavbar" href>Polo Shirts</a>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>Sportswear</a>
+                    <a @click="activateNavbar" href>Sportswear</a>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>Trousers & Chinos</a>
+                    <a @click="activateNavbar" href>Trousers & Chinos</a>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>T-Shirts</a>
+                    <a @click="activateNavbar" href>T-Shirts</a>
                   </li>
                 </ul>
                 <ul class="menu-point-category">
@@ -70,20 +82,20 @@
                     <h4>Formal</h4>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>Jackets</a>
+                    <a @click="activateNavbar" href>Jackets</a>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>Shirts</a>
+                    <a @click="activateNavbar" href>Shirts</a>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>Suits</a>
+                    <a @click="activateNavbar" href>Suits</a>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>Trousers</a>
+                    <a @click="activateNavbar" href>Trousers</a>
                   </li>
                 </ul>
               </div>
-              <ul class="menu-point-offer">
+              <ul class="menu-point-offer hidden-xs">
                 <li class="offer">
                   <a href>
                     <span class="offer-header">AUTUMN SALE!</span>
@@ -108,22 +120,22 @@
                     <h4>Casuals</h4>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>Jackets</a>
+                    <a @click="activateNavbar" href>Jackets</a>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>Hoodies & Sweatshirts</a>
+                    <a @click="activateNavbar" href>Hoodies & Sweatshirts</a>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>Polo Shirts</a>
+                    <a @click="activateNavbar" href>Polo Shirts</a>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>Sportswear</a>
+                    <a @click="activateNavbar" href>Sportswear</a>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>Trousers & Chinos</a>
+                    <a @click="activateNavbar" href>Trousers & Chinos</a>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>T-Shirts</a>
+                    <a @click="activateNavbar" href>T-Shirts</a>
                   </li>
                 </ul>
                 <ul class="menu-point-category">
@@ -131,20 +143,20 @@
                     <h4>Formal</h4>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>Jackets</a>
+                    <a @click="activateNavbar" href>Jackets</a>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>Shirts</a>
+                    <a @click="activateNavbar" href>Shirts</a>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>Suits</a>
+                    <a @click="activateNavbar" href>Suits</a>
                   </li>
                   <li class="menu-point-category-item">
-                    <a href>Trousers</a>
+                    <a @click="activateNavbar" href>Trousers</a>
                   </li>
                 </ul>
               </div>
-              <ul class="menu-point-offer">
+              <ul class="menu-point-offer hidden-xs">
                 <li class="offer">
                   <a href>
                     <span class="offer-header">AUTUMN SALE!</span>
@@ -157,7 +169,7 @@
           </li>
         </ul>
         <ul class="menu-point item">
-          <li class="menu-point-header">
+          <li @click="activateNavbar" class="menu-point-header">
             <router-link class="btn" to="/brand">The Brand</router-link>
           </li>
         </ul>
@@ -176,27 +188,27 @@
               <i class="fa fa-angle-down"></i>
             </a>
             <div class="menu-point-hover-box">
-            <ul class="menu-point-category">
-              <li class="menu-point-category-header">
-                <a href>look books</a>
-              </li>
-              <li class="menu-point-category-item">
-                <a href>Men's</a>
-              </li>
-              <li class="menu-point-category-item">
-                <a href>Women's</a>
-              </li>
-              <li class="menu-point-category-item">
-                <a href>Your's</a>
-              </li>
-            </ul>
-          </div>
-          </li>          
+              <ul class="menu-point-category">
+                <li class="menu-point-category-header">
+                  <h4 @click="activateNavbar" href>look books</h4>
+                </li>
+                <li class="menu-point-category-item">
+                  <a @click="activateNavbar" href>Men's</a>
+                </li>
+                <li class="menu-point-category-item">
+                  <a @click="activateNavbar" href>Women's</a>
+                </li>
+                <li class="menu-point-category-item">
+                  <a @click="activateNavbar" href>Your's</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
         <div class="search-bar item">
           <form name="search-form">
             <input class="search-field" type="text" placeholder="Search...">
-            <button class="search-button" type="submit">
+            <button @click="activateNavbar" class="search-button" type="submit">
               <i class="fa fa-search"></i>
             </button>
           </form>
@@ -206,6 +218,23 @@
   </header>
 </template>
 <script>
-export default {};
-
+export default {
+  data() {
+    return {
+      activeNavbar: true
+    };
+  },
+  computed: {
+    //activeNavbar: true
+  },
+  methods: {
+    activateNavbar: function(e) {
+      if (this.activeNavbar) {
+        this.activeNavbar = false;
+      } else {
+        this.activeNavbar = true;
+      }
+    }
+  }
+};
 </script>

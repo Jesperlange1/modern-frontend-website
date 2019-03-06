@@ -77,12 +77,37 @@ footer {
 }
 
 //footer-bar
-.footer-bar{
-    background-color:$topBarColor;
+.footer-bar {
+    background-color: $topBarColor;
     height: 40px;
     margin-bottom: -5px;
-
-    p{
+    p {
         display: inline-block;
+    }
+}
+
+@media (max-width:600px) {
+    .footer-lists {
+        flex-wrap: wrap;
+    }
+    .footer-list {
+        width: 100%;
+        text-align: center;
+    }
+    .footer-boxes {
+        flex-wrap: wrap;
+        .box {
+            width: 100%;
+            margin: 0 0 15px;
+            height: auto;
+            padding:20px;
+            .title{
+                margin-top:initial;
+            }
+        }
+    }
+    .footer-box {
+        width: auto;
+        height: initial;
     }
 }

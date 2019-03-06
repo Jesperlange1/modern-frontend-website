@@ -189,3 +189,11 @@
         flex-wrap: wrap;
     }
 }
+@media (max-width:600px){
+    .lookbook-section{
+        flex-wrap: wrap;
+    }
+    .lookbook{
+        width:100%;
+    }
+}
